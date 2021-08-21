@@ -35,7 +35,7 @@ class StartupAsync extends Startup {
 			return ;
 		}
 		$u = self::parseUrl ( $url );
-		var_dump(class_exists(self::$ctrlNS . $u [0]));
+		var_dump(class_exists(self::$ctrlNS . $u [0],true));
 		var_dump(self::$ctrlNS . $u [0]);
 		
 		/*
