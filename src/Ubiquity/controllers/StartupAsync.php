@@ -35,7 +35,9 @@ class StartupAsync extends Startup {
 			return ;
 		}
 		$u = self::parseUrl ( $url );
-		var_dump($u);
+		var_dump(class_exists(self::$ctrlNS . $u [0]));
+		var_dump(self::$ctrlNS . $u [0]);
+		
 		/*
 		if (\is_array ( Router::getRoutes () ) && ($ru = Router::getRoute ( $url, true, self::$config ['debug'] ?? false)) !== false) {
 			if (\is_array ( $ru )) {
