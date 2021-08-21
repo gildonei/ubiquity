@@ -35,6 +35,8 @@ class StartupAsync extends Startup {
 			return ;
 		}
 		$u = self::parseUrl ( $url );
+		var_dump($u);
+		/*
 		if (\is_array ( Router::getRoutes () ) && ($ru = Router::getRoute ( $url, true, self::$config ['debug'] ?? false)) !== false) {
 			if (\is_array ( $ru )) {
 				if (isset ( $ru ['controller'] )) {
@@ -58,6 +60,7 @@ class StartupAsync extends Startup {
 				static::runAction ( $ru, $i, $f );
 			})($initialize,$finalize);
 		}
+		*/
 	}
 	
 	public static function runAction(array &$u, $initialize = true, $finalize = true): void {
